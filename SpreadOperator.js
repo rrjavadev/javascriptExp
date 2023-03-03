@@ -39,4 +39,19 @@ const mixed = function(name1, name2, ...names){
 
 mixed('A',  ...['C','D','E']);
 
+/**
+ * Use spread in constructor example 
+ **/
 
+const patternAndFlags = ['r', 'i'];
+const regExp = new RegExp(...patternAndFlags);
+console.log(regExp);
+
+/**
+ * 
+ * The spread operator can also be used to copy, concatenate, and manipulate arrays:
+ * */
+
+console.log([...names1, 'Brooke']); //Add a new item to array
+console.log([...names1, ...names2]); //concatinate arrays
+console.log([...names1, 'Brooke', ...names2]);
