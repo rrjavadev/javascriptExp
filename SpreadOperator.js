@@ -54,4 +54,4 @@ console.log(regExp);
 
 console.log([...names1, 'Brooke']); //Add a new item to array
 console.log([...names1, ...names2]); //concatinate arrays
-console.log([...names1, 'Brooke', ...names2]);
+console.log([...names1, 'Brooke', ...names2]); //Manipulate arrays
