@@ -1,10 +1,11 @@
 const canVote = function(param) {
   if(param ===18 ){
     return 'yay, start voting';
-  }else if(param > 18){
-	  return 'please vote';
+  }
+  else if(param > 18){
+    return 'please vote';
   } 
-   else {
+  else {
     return 'no can\'t vote';
   }
 };
