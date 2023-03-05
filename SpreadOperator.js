@@ -57,7 +57,8 @@ console.log([...names1, ...names2]); //concatinate arrays
 console.log([...names1, 'Brooke', ...names2]); //Manipulate arrays
 
 /**
- * Copy the contents of objects using spread operator
+ * Copy the contents of objects using spread operator. This helps to make
+ * immutable copies of objects.
  **/
 
 const sam = {name: 'Sam', age: 2};
