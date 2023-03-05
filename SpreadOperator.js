@@ -40,7 +40,7 @@ const mixed = function(name1, name2, ...names){
 mixed('A',  ...['C','D','E']);
 
 /**
- * Use spread in constructor example 
+ * Use spread in constructor - example 
  **/
 
 const patternAndFlags = ['r', 'i'];
@@ -55,3 +55,14 @@ console.log(regExp);
 console.log([...names1, 'Brooke']); //Add a new item to array
 console.log([...names1, ...names2]); //concatinate arrays
 console.log([...names1, 'Brooke', ...names2]); //Manipulate arrays
+
+/**
+ * Copy the contents of objects using spread operator
+ **/
+
+const sam = {name: 'Sam', age: 2};
+
+console.log(sam);
+console.log({...sam, age: 3});//age is changed in the object
+console.log({...sam, age: 4, height: 100});
+console.log(sam); //The original object sam is intact
