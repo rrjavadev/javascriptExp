@@ -7,12 +7,12 @@ const sortByTitle = function(books){
 
 
 const sortByTitle2 = function(books, ascending = true) { const multiplier = ascending ? 1 : -1;
-    const byTitle = function(book1, book2) {
+  const byTitle = function(book1, book2) {
     return book1.title.localeCompare(book2.title) * multiplier;
-    };
-    return books.slice().sort(byTitle); };
+  };
+  return books.slice().sort(byTitle); };
     
-  /**
+/**
      * The reason for not using sort() directly is that it will 
      * modify the array on which it is called—changing the input given to a 
      * function is a poor programming practice. 
