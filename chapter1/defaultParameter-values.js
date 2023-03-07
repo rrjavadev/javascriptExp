@@ -31,3 +31,20 @@ console.log(sortByTitle(books));
 
 //Descending
 console.log(sortByTitle2(books, false));
+
+/***
+ * Multiple default parameters
+ */
+
+const fetchData = function(
+  id,
+  location = {host: 'localhost', port: 443},
+  uri = 'employees'
+){
+  console.log('fetch data from https://' + 
+location.host + ':' + location.port + '/' + uri);
+};
+
+fetchData(2);
+fetchData(2, {host: 'newdev', port: '8080'});
+fetchData(3, {host: 'newdev', port: '8080'}, 'books');
