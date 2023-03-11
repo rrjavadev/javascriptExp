@@ -48,3 +48,24 @@ location.host + ':' + location.port + '/' + uri);
 fetchData(2);
 fetchData(2, {host: 'newdev', port: '8080'});
 fetchData(3, {host: 'newdev', port: '8080'}, 'books');
+/**
+ * Mixing default parameters and regular parameters is poor design. JavaScript will not stop us from doing that, but our wisdom should. As a good practice keep all the default parameters trailing.
+ */
+
+/**
+ * Expression as default parameter
+ */
+const fileTax = function(papers, dateOfFiling = new Date('2016-12-31')) 
+{ console.log('dateOfFiling: ' + dateOfFiling.getFullYear());
+};
+
+fileTax('Mathrubhumi', new Date('01-01-1998'));
+fileTax('Mathrubhumi');
+
+const computeTax = function(amount, stateTax = 15, localTax = stateTax * 0.10){
+  console.log('statetax: ' + stateTax + ' localtax: ' + localTax);
+};
+
+computeTax(15);
+computeTax(100, 10, 2);
+computeTax(100,10);
