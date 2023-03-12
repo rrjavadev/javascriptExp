@@ -44,3 +44,17 @@ const andAlso = ['eggs', 'donuts', 'tea'];
 
 //call purchaseItems so it prints bread, milk, eggs, donuts, tea
 purchaseItems(...mustHaves, ...andAlso);
+
+/**
+ * Exercise 3
+ * Let’s reimplement the purchaseItems() function from the previous exercise so that 
+ * milk and bread are assumed for the first two parameters, respectively,
+ *  if a value is not provided for the argument in that position.
+ */
+const purchaseItems2 = function(essential1 = 'milk', essential2 = 'bread', ...optionals){
+  console.log(essential1 + ', ' + essential2 + ', ' + optionals.join(', '));
+};
+const items = ['cheese', 'milk'];
+purchaseItems2('cheese'); //cheese, bread,
+purchaseItems2(...items); //cheese, milk,
+purchaseItems2(); //milk, bread,
