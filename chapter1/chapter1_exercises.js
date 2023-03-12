@@ -9,7 +9,6 @@ const amountAfterTaxes = function(amount, ...taxes){
     return amount * tax / 100.0;
   };
     
-
   const total = function(total , value){
     return total + value;
   };
