@@ -70,7 +70,13 @@ const placeOrder = function(id, amount, shipping = (amount < 20 ? 5 : 10), date 
 //shipping, if not given, is $5 if amount less than 20 else $10
 //date is today's date unless given
 placeOrder(1, 12.10, 3, new Date('05/15/2018'));
-placeOrder(1, 25.20, 10);
+placeOrder(1, 25.20, 20);
 placeOrder(1, 12.05);
 placeOrder(1, 25.30);
 placeOrder(1, 25.20);
+
+/**
+ * Exercise 5:
+ * In the previous example, how can we pass the value for the date parameter without passing a value for the shipping parameter?
+ */
+placeOrder(1, 25.20, undefined, new Date('02/02/2023'));//mm/dd/yyyy
