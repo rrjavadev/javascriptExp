@@ -61,5 +61,7 @@ sam[age] = 3;
 console.log(sam[age]); //Symbol property changed to 3
 
 
-
+/**
+ * Built-in Objects for Symbols
+ */
 
